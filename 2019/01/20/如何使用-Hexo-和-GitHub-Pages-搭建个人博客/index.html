@@ -50,7 +50,7 @@
 <p>稍等一会儿，应该就能访问了。</p>
 <p>如果一开始选的是个人主页，网址就是<code>&lt;username&gt;.github.io</code>；如果是项目主页，网址就是<code>&lt;username&gt;.github.io/&lt;reponame&gt;</code>。</p>
 <h3 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h3><p>以上所谓发布，其实是把你的源文件、素材等等之类的东西解析成可以直接部署的静态网页，然后推送到 GitHub 仓库里，然后 GitHub 会用它形成可以访问的网页。</p>
-<p>生成的静态网页位于<code>public</code>目录下，只有这个文件夹里的内容会被推送到 GitHub 仓库，而且每次推送都会把之前的内容完全覆盖。</p>
+<p>生成的静态网页位于<code>public</code>目录下，只有这个文件夹里的内容会被推送到 GitHub 仓库。</p>
 <h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 <p>这个命令用于删除之前生成内容，例如<code>public</code>文件夹。如果你确定新旧生成之间没什么冲突，也可以不删除，生成会快一些（大概吧）。</p>
 <h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
@@ -64,7 +64,7 @@
 <h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 <p>上面这个命令用于新建一条博客。<code>layout</code>可以省去，默认是<code>post</code>。<code>title</code>是新博客的标题，如果含有空格，需要用双引号引起来。Hexo 会按照默认模板生成一个<code>&lt;title&gt;.md</code>文件，就是你要编辑的新博客的文件。</p>
 <p>在<code>source/_posts</code>目录下找到该文件，打开。</p>
-<p>你会发现里面已经有一些内容了，这就是按照模板生成的。模板可以自定义，不过现在不用管它。</p>
+<p>你会发现里面已经有一些内容了，这部分叫做 front-matter，可以对文档做一些设置，目前先不用改。</p>
 <p>在最后一行<code>---</code>的下面写入你自己的内容，完成后保存。</p>
 <p>发布：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure>
